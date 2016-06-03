@@ -4,7 +4,17 @@ import angularMeteor from 'angular-meteor';
 angular.module('liquidpoll', [ angularMeteor ])
 	.controller('PartidosListCtrl', ['$scope', function($scope) {
 
-		$scope.partidos = [{
+		$scope.helpers({
+			partidos() {
+				return Partidos.find({});
+			}
+
+    		});
+
+
+
+		
+		/*$scope.partidos = [{
 			'name': 'Partido Popular',
 			'description': 'Enfermos e hijos de puta.'
     			}, {
@@ -17,7 +27,7 @@ angular.module('liquidpoll', [ angularMeteor ])
 			'name': 'Ciudadamos',
 			'description': 'Liberales hijos de puta'	
 			}
-		];
+		];*/
 
 	}]);
 
