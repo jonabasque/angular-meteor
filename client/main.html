@@ -1,6 +1,6 @@
-<div ng-controller="PartidosListCtrl">
+<div ng-controller="PartidosListCtrl as partCtl">
   <ul>
-    <li ng-repeat="partido in partidos">
+    <li ng-repeat="partido in partCtl.partidos">
       {{partido.name}}
       <p>{{partido.description}}</p>
     </li>
