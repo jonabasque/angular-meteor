@@ -1,8 +1,7 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
-import templateUrl from './partidosList.html';
- 
+import template from './partidosList.html';
 
 class PartidosList {
 	constructor($scope, $reactive) {
@@ -24,9 +23,7 @@ const name = 'partidosList';
 
 export default angular.module(name, [angularMeteor])
 	.component(name, {
-		templateUrl,
+		template,
 		controllerAs: name,
 		controller: PartidosList
 	});
-
-
