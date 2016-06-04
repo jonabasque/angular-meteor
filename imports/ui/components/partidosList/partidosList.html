@@ -5,6 +5,7 @@
     <li ng-repeat="partido in partidosList.partidos">
       {{partido.name}}
       <p>{{partido.description}}</p>
+      <partido-remove partido="partido"></partido-remove>
     </li>
   </ul>
 </div>
