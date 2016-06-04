@@ -1,3 +1,7 @@
+import { Meteor } from 'meteor/meteor';
+import { Partidos } from '../imports/api/partidos';
+
+
 Meteor.startup(() => {
 	if (Partidos.find().count() === 0) {
     		const partidos = [{
@@ -11,7 +15,7 @@ Meteor.startup(() => {
       			'description': 'Posibles hijos de puta'
 			}, {
 			'name': 'Ciudadamos',
-			'description': 'Liberales hijos de puta'	
+			'description': 'Liberales hijos de puta'
 			}
 		];
 
@@ -21,5 +25,3 @@ Meteor.startup(() => {
 
   	}
 });
-
-

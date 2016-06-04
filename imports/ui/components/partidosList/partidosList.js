@@ -2,6 +2,7 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import template from './partidosList.html';
+import { Partidos } from '../../../api/partidos';
 import { name as PartidoAdd } from '../partidoAdd/partidoAdd';
 
 class PartidosList {
