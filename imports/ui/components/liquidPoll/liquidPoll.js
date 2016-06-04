@@ -15,4 +15,12 @@ export default angular.module( name, [ angularMeteor, PartidosList, uiRouter ])
     template,
     controllerAs: name,
     controller: LiquidPoll
-});
+  })
+  .config(config);
+
+function config($locationProvider, $urlRouterProvider) {
+  'ngInject';
+
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/liquid-poll');
+}
