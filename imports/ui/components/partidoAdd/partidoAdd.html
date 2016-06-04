@@ -1,9 +1,9 @@
 <form>
   <label>Nombre de partido:</label>
-  <input type="text"/>
+  <input type="text" ng-model="partidoAdd.partido.name"/>
 
   <label>Descripción:</label>
-  <input type="text"/>
+  <input type="text" ng-model="partidoAdd.partido.description"/>
 
-  <button>Añadir partido!</button>
+  <button ng-click="partidoAdd.submit()">Añadir partido!</button>
 </form>

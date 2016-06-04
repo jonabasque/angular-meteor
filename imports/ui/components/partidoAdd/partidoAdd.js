@@ -3,7 +3,14 @@ import angularMeteor from 'angular-meteor';
 
 import template from './partidoAdd.html';
 
-class PartidoAdd {}
+class PartidoAdd {
+  constructor() {
+    this.partido = {};
+  }
+  submit() {
+    console.log('submit:', this.partido);
+  }
+}
 
 const name = 'partidoAdd';
 
