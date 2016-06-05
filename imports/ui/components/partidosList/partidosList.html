@@ -3,6 +3,7 @@
 <div>
   <ul>
     <li ng-repeat="partido in partidosList.partidos">
+      <!-- Estamos invocando el estado "partidoView" y le pasamos ciertos parametros que recogemos el $stateParams -->
       <a ui-sref="partidoView({ partidoId: partido._id })">{{partido.name}}</a>
       <p>{{partido.description}}</p>
       <partido-remove partido="partido"></partido-remove>
