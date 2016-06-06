@@ -12,7 +12,13 @@ class LiquidPoll {}
 const name = 'liquidPoll';
 
 // create a module
-export default angular.module( name, [ angularMeteor, PartidosList, PartidoView, Navigation, uiRouter ])
+export default angular.module( name, [
+  angularMeteor,
+  PartidosList,
+  PartidoView,
+  Navigation,
+  'accounts.ui', 
+  uiRouter ])
   .component(name, {
     template,
     controllerAs: name,
