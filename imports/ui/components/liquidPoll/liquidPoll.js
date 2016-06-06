@@ -17,18 +17,29 @@ export default angular.module( name, [
   PartidosList,
   PartidoView,
   Navigation,
-  'accounts.ui', 
+  'accounts.ui',
   uiRouter ])
   .component(name, {
     template,
     controllerAs: name,
     controller: LiquidPoll
   })
-  .config(config);
+  .config(config)
+  .run(run);
 
 function config($locationProvider, $urlRouterProvider) {
   'ngInject';
 
   $locationProvider.html5Mode(true);
   $urlRouterProvider.otherwise('/');
+}
+
+function run($rootScope, $state) {
+  'ngInject';
+
+  $rootScope.$on('$stateChangeError', (event, toState, toParams, fromState, fromParams, error) => {
+    if (error === 'AUTH_REQUIRED') {
+      $state.go('partidos');
+    }
+  });
 }
